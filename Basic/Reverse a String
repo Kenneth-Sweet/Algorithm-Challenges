@@ -1,1 +1,12 @@
+//reverse a string and return it.
 
+
+function reverseStr(str) {
+  var strArr = str.split("");    //using split with empty quotes splits every character into it's own array value within one array
+  var splitArr = str.reverse();  //reverse the order of the array no parameters required
+  var joinArr = str.join("");    // opposite of split function
+  
+  return joinArr                 // without this function will not give result to us.
+  }
+  console.log(reverseStr("txet elpmaxE"));
+  
