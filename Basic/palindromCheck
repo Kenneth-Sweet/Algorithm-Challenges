@@ -1,0 +1,21 @@
+/*determine palindrome. Palindromes are words/phrases the same forwards and backwards if you remove all punctuation and case.
+Because of how this regex snippet works this will not work properly on kanji characters unless you remove the regex and personally
+check through to make sure no symbols are obscuring your result I'm working on a workaround for this, but it's more complicated depending
+on whether or not you want*/
+
+
+
+function palindrome(str) {    
+  var reg = /[\W_]/g;          //regex to remove all case and symbols
+  var palinChecker = str.toLowerCase().replace(reg, "");  //Removes casing then applies regex
+    
+  var reverse = palinChecker.split("").reverse().join(""); //reverse string by turning to array reversing array and rejoining
+  if (reverse === palinChecker) return true;
+  
+    return false;
+  
+}
+
+
+
+palindrome("eye"); // will work on test cases
