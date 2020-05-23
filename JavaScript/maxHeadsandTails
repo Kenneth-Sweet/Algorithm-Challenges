@@ -1,0 +1,15 @@
+function getMaxStreaks(toss) {
+    let maxH = 0, maxT =0, i =0;
+    
+    for(let i =0; i < toss.length; i++){
+      if(toss.charAt(i) == 'H' && toss.charAt(i+6) == 'H') maxH++;
+      if(toss.charAt(i) == 'T'  && toss.charAt(i+6) == "T") maxT++;
+    }
+
+    return `${maxH} ${maxT}`
+
+
+}
+
+
+getMaxStreaks('Heads Tails Tails Heads Tails Heads')
