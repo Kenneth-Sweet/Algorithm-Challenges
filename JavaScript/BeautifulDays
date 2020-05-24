@@ -1,0 +1,17 @@
+function beautifulDays(i, j, k) {
+    let ret = 0
+
+    while (i <j + 1) {
+        let reversed = i
+        .toString()
+        .split('')
+        .reverse()
+        .join('');
+        if ((i - reversed) %k ===0) ret++
+        i++
+    }
+
+    return ret
+    
+
+}
